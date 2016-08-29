@@ -1,0 +1,29 @@
+{
+  "name": "ng-battleship",
+  "version": "1.0.0",
+  "description": "Demo Battleship Angular",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeniol/ng-battleship.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugeniol/ng-battleship/issues"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "homepage": "https://github.com/eugeniol/ng-battleship#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "lodash": "^4.15.0"
+  }
+}

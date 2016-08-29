@@ -1,0 +1,21 @@
+<ul class="promoList container-fluid">
+    <table class="table table-bordered  table-hover table-condensed">
+        <tr ng-repeat="it in itemList" class="promoItem" ng-click="select(it)">
+            <td class="promoImg">
+                <img ng-src="{{it.Images[0].url_75x75}}" alt="{{ it.title}}"
+                     class="img-thumbnail">
+            </td>
+            <td>
+                <h5><a ng-bind-html="it.title"></a></h5>
+                <p item-description="it" size="200"></p>
+            </td>
+            <td><span item-price="it"></span></td>
+        </tr>
+    </table>
+</ul>
+
+
+<p>
+    <a ng-click="refresh()">Refresh List</a>
+</p>
+

@@ -1,0 +1,64 @@
+.promoList {
+    list-style: none;
+}
+
+.promoItem {
+    cursor: pointer;
+}
+
+.promoItem .promoImg {
+    width: 75px;
+}
+
+.promoItem .price {
+    font-size: 1em;
+}
+
+.thumbs img {
+    float: left;
+    margin: 5px 5px 0 0;
+}
+
+input.search-query {
+    width: 200px;
+}
+
+.photo-gallery .main {
+    height: 400px;
+    overflow: hidden;
+}
+
+.photo-gallery .main img {
+    display: block;
+    margin: auto;
+
+}
+
+[ng-click] {
+    cursor: pointer;
+}
+
+.photo-gallery .thumbs .selected {
+    border-color: blue;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.tags .tag {
+    margin: 0 2px 0 0;
+    display: inline-block;
+}
+
+#cartDropdown {
+    width: 400px;
+
+}
+
+#cartDropdown li a {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+}

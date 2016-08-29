@@ -1,0 +1,14 @@
+<form class="navbar-form navbar-left">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="search-query form-control" placeholder="Search" ng-model="term"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit" ng-click="go()">
+                            <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+        </div>
+    </div>
+
+    <a ui-sref="home.search(lastSearch)" ng-if="lastSearch.term"> Back to search {{lastSearch.term}}</a>
+</form>

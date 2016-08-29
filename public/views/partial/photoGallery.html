@@ -1,0 +1,14 @@
+<div ng-if="list.length" class="photo-gallery">
+    <div class="main">
+
+        <img ng-src="{{current.url_fullxfull}}" alt="{{ current.title}}" ng-click="next()" class="img-responsive">
+    </div>
+
+
+    <div class="thumbs" ng-repeat="it in list">
+        <img ng-src="{{it.url_75x75}}"
+             ng-class="{selected: isSelected(it)}"
+             alt="{{ it.title}}" class="img-thumbnail" width="75"
+             height="75" ng-click="select(it)">
+    </div>
+</div>

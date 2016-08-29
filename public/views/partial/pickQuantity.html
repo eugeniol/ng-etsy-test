@@ -1,0 +1,31 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add to cart</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        {{$ctrl.item.title}}
+
+        <form class="form-inline" name="pickQuantity">
+            <div class="form-group">
+                <p>Only {{$ctrl.item.quantity}} items available</p>
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" ng-model="$ctrl.quantity" min="1"
+                       max="{{ $ctrl.item.quantity }}" required>
+                <span ng-if="pickQuantity.$valid">
+                    for $ {{$ctrl.quantity * $ctrl.item.price}} <sup>{{$ctrl.item.currency_code}}</sup>
+                </span>
+                <span ng-if="!pickQuantity.$valid">
+                    sorry that quantity is not available
+                </span>
+
+            </div>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-disabled="!pickQuantity.$valid" ng-click="$ctrl.ok()">Add
+            {{$ctrl.quantity}} items to cart
+        </button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+<h3>{{item.title}}</h3>
+
+<div class="promoDetail">
+    <div class="row">
+        <div class="col-md-6">
+            <photo-gallery list="item.Images"></photo-gallery>
+        </div>
+        <div class="col-md-6">
+            <p item-description="item" size="400"></p>
+
+
+            <div>
+                <span class="price">{{item.price}}<sup>{{item.currency_code}}</sup></span>
+            </div>
+
+            <div ng-controller="AddToCartController as cart">
+                <button class="btn btn-success" ng-click="cart.add(item)">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                    Add to cart
+                </button>
+            </div>
+            <hr>
+            <tag-cloud tags="item.tags"></tag-cloud>
+
+
+        </div>
+    </div>
+
+</div>
+
