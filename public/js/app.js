@@ -21,7 +21,12 @@ angular
                     'navbar@': {
                         templateUrl: 'views/partial/search.html',
                         controller: 'SearchController'
+                    },
+                    'cartbar@': {
+                        templateUrl: 'views/partial/cart.html',
+                        controller: 'CartController'
                     }
+
                 }
             })
             .state('home.search', {

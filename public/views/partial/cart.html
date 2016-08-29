@@ -1,0 +1,23 @@
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Login</a></li>
+    <li uib-dropdown ng-if="cart">
+        <a uib-dropdown-toggle>
+            <i class="glyphicon glyphicon-shopping-cart"></i> {{cart.length}} items
+            <span class="caret"></span></a>
+
+        <ul class="dropdown-menu" uib-dropdown-menu ng-if="cart.length" id="cartDropdown">
+            <li ng-repeat="it in cart">
+                <a href=""><strong>{{it.quantity}}</strong> x <span truncate="">{{it.item.title}}</span></a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li><a href="">Total $ {{getTotal()}}</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a ng-click="checkout()">Checkout cart</a></li>
+            <li><a ng-click="clear()">Clear</a></li>
+        </ul>
+
+        <ul class="dropdown-menu" uib-dropdown-menu ng-if="!cart.length">
+            <li><a href=""><em>No items</em></a></li>
+        </ul>
+    </li>
+</ul>
